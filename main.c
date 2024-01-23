@@ -1,16 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-#include <smslibrary.h>
+#include <stdlib.h>
+#include "sms_library/smslibrary.h"
+#include "utils/utils.h"
 
-void print(char* msg) 
-{
-  printf("%s\n", msg);
-}
-
-
-int main () 
-{
+int main () {
   // have a while loop running unles user exits program
+  clearterminal();
   int runprogram = 1;
   char userinput[20];
   while (runprogram == 1) {
@@ -21,6 +17,7 @@ int main ()
 
     if (strcmp(userinput, "add") == 0)
     {
+      // need to compile sms with main; gcc main.c smslibrary.c - o desinationfilename
       addStudent();
     }
 
