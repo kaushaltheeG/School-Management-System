@@ -31,3 +31,9 @@ void clearTerminalLines(int numLines)
     printf("\033[1A\033[K");
   }
 }
+
+void inlineInput(const char *fieldName, const char *format, char *fieldValue)
+{
+  printf("%s: ", fieldName);
+  scanf(format, fieldValue);
+}

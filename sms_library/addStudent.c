@@ -10,6 +10,8 @@ void addStudent(struct IStudent *student)
 {
   clearterminal();
   getStudentFullName(student);
+  // generate random id
+  // user adds student's course based on course catalog "db"
 
 }
 
@@ -19,20 +21,9 @@ void getStudentFullName(struct IStudent *student)
   print("Enter Student's Full Name");
   while (1)
   {
-    print("First Name: ");
-    scanf("%19s", student ->firstname);
-    clearTerminalLines(2);
-    print("First Name: %s", student ->firstname);
-
-    print("Last Name: ");
-    scanf("%29s", student ->lastname);
-    clearTerminalLines(2);
-    print("Last Name: %s", student->lastname);
-
-    print("Middle Name: ");
-    scanf("%29s", student->middlename);
-    clearTerminalLines(2);
-    print("Middle Name: %s", student->middlename);
+    inlineInput("First Name", "%19s", student->firstname);
+    inlineInput("Last Name", "%29s", student->lastname);
+    inlineInput("Middle Name", "%29s", student->middlename);
 
     print("Confirm Full Name: %s %s %s", student->firstname, student->middlename, student->lastname);
     print("Type 'yes' or 'no'");

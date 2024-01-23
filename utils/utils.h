@@ -4,5 +4,6 @@
 void print(const char *msg, ...);
 void clearterminal();
 void clearTerminalLines(int numLines);
+void inlineInput(const char *fieldName, const char *format, char *fieldValue);
 
 #endif
